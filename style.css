@@ -1,33 +1,38 @@
+@font-face {
+    font-family: fontUbuntu;
+    src: url(UbuntuNerdFont-Bold.ttf);
+}
+
 body {
-    font-size: xx-large;
-    font-family: Arial, sans-serif;
-    background-color: #ede9e2d5;
+    font-family: fontUbuntu;
+    background-color: #1E2933;
     margin: 0;
     padding: 0;
-    height: 100vh;
-    text-align: center;
     display: flex;
     flex-direction: column;
 }
 
 header {
-    padding: 15px;
-    background-color: #be8719;
+    padding: 0px;
+    background-color: #3672A4;
+    box-shadow: 0 0 10px rgba(145, 142, 142, .5);
     margin-bottom: 20px;
     z-index: -2;
 }
 
 header > h1 {
     text-align: center;
-    font-size: 36px;
+    font-size: 45px;
     color: #ffffff;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(131, 131, 131, 0.5);
 }
 
 header > img {
     -webkit-user-drag: none;
     user-select: none;
     position: absolute;
-    width: 100px; /* Ancho de la imagen */
+    width: 90px; /* Ancho de la imagen */
     opacity: 0.3;
 
     /* Posiciona la imagen en el centro */
@@ -36,7 +41,9 @@ header > img {
     transform: translateX(-50%);
     z-index: -1;
 }
+footer > p{
 
+}
 .chat {
     background-color: #ffffff;
     width: 500px;
@@ -44,5 +51,5 @@ header > img {
     justify-content: center; /* Centra horizontalmente */
     padding: 15px;
     border-radius: 40px;
-    box-shadow: 0 0 15px rgba(145, 142, 142, 0.1);
+    box-shadow: 0 0 5px rgba(221, 220, 220, 0.2);
 }
