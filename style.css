@@ -3,6 +3,11 @@
     src: url(UbuntuNerdFont-Bold.ttf);
 }
 
+@font-face {
+    font-family: fontEspy;
+    src: url(fuenteEspy.ttf);
+}
+
 body {
     font-family: fontUbuntu;
     background-color: #1E2933;
@@ -41,8 +46,13 @@ header > img {
     transform: translateX(-50%);
     z-index: -1;
 }
-footer > p{
-
+footer {
+    font-family: fontEspy;
+    color: #ffffff;
+    opacity: .5;
+    display: flex;
+    justify-content: end;
+    margin-right: 20px;
 }
 .chat {
     background-color: #ffffff;
