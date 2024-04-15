@@ -1,13 +1,5 @@
-img {
-    display: block;
-    margin: -130px auto 0; /* Mueve la imagen hacia arriba */
-    width: 100px; /* Ancho de la imagen */
-    height: auto;
-    opacity: 0.5;
-}
-
 body {
-    font-size:xx-large;
+    font-size: xx-large;
     font-family: Arial, sans-serif;
     background-color: #ede9e2d5;
     margin: 0;
@@ -22,22 +14,35 @@ header {
     padding: 15px;
     background-color: #be8719;
     margin-bottom: 20px;
+    z-index: -2;
 }
 
-header h1 {
+header > h1 {
     text-align: center;
     font-size: 36px;
     color: #ffffff;
 }
 
+header > img {
+    -webkit-user-drag: none;
+    user-select: none;
+    position: absolute;
+    width: 100px; /* Ancho de la imagen */
+    opacity: 0.3;
+
+    /* Posiciona la imagen en el centro */
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
 .chat {
     background-color: #ffffff;
     width: 500px;
-    height: 350px ;
     margin: 40px auto 0; /* Mueve el cuadro hacia abajo */
     justify-content: center; /* Centra horizontalmente */
-    padding: 45px;
+    padding: 15px;
     border-radius: 40px;
-    box-shadow: 0 0 15px rgba(145, 142, 142, 0.5);
+    box-shadow: 0 0 15px rgba(145, 142, 142, 0.1);
 }
-
