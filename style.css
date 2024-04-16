@@ -187,12 +187,20 @@ footer > p {
 
 .chat {
     background-color: #ffffff;
-    width: 500px;
+    width: clamp(300px, 80%, 600px);
+    height: 55vh;
     margin: 40px auto 0; /* Mueve el cuadro hacia abajo */
     justify-content: center; /* Centra horizontalmente */
     padding: 15px;
     border-radius: 40px;
     box-shadow: 0 0 5px rgba(221, 220, 220, 0.2);
+}
+
+.chat > iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    justify-content: center;
 }
 
 @media (max-width: 930px) {
