@@ -21,6 +21,7 @@ body {
     background-color: #000000;
     margin: 0;
     padding: 0;
+    height: 100svh;
     display: flex;
     flex-direction: column;
 }
@@ -67,7 +68,21 @@ header > .right > a {
     font-family: "Inter";
     color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
+}
+
+/* Header underline hover animation */
+header > .right > a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: rgba(246, 224, 112, 0.8);
+    transition: width 0.3s;
+}
+
+header > .right > a:hover::after {
+    width: 100%;
 }
 
 /* Hero */
@@ -75,7 +90,6 @@ header > .right > a {
     padding: 2rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: calc(100vh - 12rem);
     gap: 8vw;
 }
 
@@ -143,12 +157,32 @@ header > .right > a {
 
 /* Footer */
 footer {
-    font-family: fontEspy;
-    color: #ffffff;
-    opacity: 0.5;
     display: flex;
-    justify-content: end;
-    margin-right: 20px;
+    opacity: 0.8;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+    padding: 1rem;
+    margin: 0 1rem;
+    margin-top: auto;
+    bottom: 0;
+    font-family: "Inter";
+    font-size: 14px;
+}
+
+footer > p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 24px;
+}
+
+.footer-links > a > img {
+    width: 24px;
+    height: 24px;
 }
 
 .chat {
@@ -161,7 +195,7 @@ footer {
     box-shadow: 0 0 5px rgba(221, 220, 220, 0.2);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 930px) {
     body {
         padding: 0;
         min-width: 100vw;
@@ -187,7 +221,7 @@ footer {
     header > .right {
         margin: 0;
         width: 100%;
-        justify-content: space-between;
+        justify-content: space-around;
         gap: 0;
     }
 
@@ -200,6 +234,7 @@ footer {
     }
 
     .hero > div {
+        align-items: center;
         text-align: center;
         padding-top: 0;
     }
