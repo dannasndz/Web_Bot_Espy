@@ -7,7 +7,7 @@ body {
 }
 
 body {
-    background-image: url(wallpaper.png);
+    background-image: url(images/wallpaper.png);
     background-attachment: fixed;
     background-size: cover;
     background-color: #000000;
