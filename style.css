@@ -1,16 +1,11 @@
 @font-face {
-    font-family: fontUbuntu;
-    src: url(UbuntuNerdFont-Bold.ttf);
-}
-
-@font-face {
     font-family: fontEspy;
     src: url(fuenteEspy.ttf);
 }
 
 body {
-    font-family: fontUbuntu;
-    background-color: #1E2933;
+    background-color: #1e2933;
+    max-width: 100svw;
     margin: 0;
     padding: 0;
     display: flex;
@@ -18,38 +13,51 @@ body {
 }
 
 header {
-    padding: 0px;
-    background-color: #3672A4;
-    box-shadow: 0 0 10px rgba(145, 142, 142, .5);
-    margin-bottom: 20px;
-    z-index: -2;
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    justify-content: space-between;
 }
 
-header > h1 {
-    text-align: center;
-    font-size: 45px;
-    color: #ffffff;
+header > .left,
+.right {
+    display: flex;
+    align-items: center;
+}
+
+header > .left > h1 {
+    font-family: "Ubuntu";
     font-weight: bold;
-    text-shadow: 0 0 10px rgba(131, 131, 131, 0.5);
+    font-size: 32px;
+    color: #ffffff;
+    /* text-shadow: 0 0 10px rgba(131, 131, 131, 0.5); */
 }
 
-header > img {
-    -webkit-user-drag: none;
+header > .left > img {
     user-select: none;
-    position: absolute;
-    width: 90px; /* Ancho de la imagen */
-    opacity: 0.3;
-
-    /* Posiciona la imagen en el centro */
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: -1;
+    -webkit-user-drag: none;
+    width: 87px; /* Ancho de la imagen */
+    height: 87px; /* Alto de la imagen */
 }
+
+header > .right {
+    gap: 25px;
+    padding-bottom: 10px;
+}
+
+header > .right > a {
+    margin: 0px;
+    font-family: "Inter";
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
 footer {
     font-family: fontEspy;
     color: #ffffff;
-    opacity: .5;
+    opacity: 0.5;
     display: flex;
     justify-content: end;
     margin-right: 20px;
