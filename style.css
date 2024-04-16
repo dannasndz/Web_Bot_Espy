@@ -1,28 +1,17 @@
-@font-face {
-    font-family: fontEspy;
-    src: url(fuenteEspy.ttf);
-}
-
-body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+html,
+body {
     height: 100%;
-    background-image: url(wallpaper.png);
-    background-attachment: fixed;
-    background-size: cover;
-    opacity: 0.7;
-    z-index: -1;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 body {
+    background-image: url(wallpaper.png);
+    background-attachment: fixed;
+    background-size: cover;
     background-color: #000000;
-    margin: 0;
     padding: 0;
-    height: 100svh;
-    display: flex;
     flex-direction: column;
 }
 
@@ -120,8 +109,7 @@ header > .right > a:hover::after {
 
 .hero > img {
     padding-left: 1rem;
-    width: 506px;
-    height: 488px;
+    height: 470px;
     justify-self: start;
 }
 
@@ -185,6 +173,7 @@ footer > p {
     height: 24px;
 }
 
+/* Chat */
 .chat {
     background-color: #ffffff;
     width: clamp(300px, 80%, 600px);
@@ -203,6 +192,35 @@ footer > p {
     justify-content: center;
 }
 
+/* About */
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 2rem;
+    padding-top: 0;
+}
+
+.about > h2 {
+    text-align: center;
+    font-family: "Ubuntu";
+    font-size: 28px;
+    color: #ffffff;
+    margin: 0;
+}
+
+.about > p {
+    max-width: 75ch;
+    text-align: justify;
+    font-family: "Ubuntu";
+    font-weight: 300;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+/* Responsive */
 @media (max-width: 930px) {
     body {
         padding: 0;
